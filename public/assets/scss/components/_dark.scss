@@ -54,6 +54,113 @@
             }
         }
     }
+    .right-sidebar-chat {
+        .msger-inputarea {
+            .EmojiPickerReact {
+                background-color: var(--body-color) !important;
+                border-color: var(--card-color) !important;
+            }	
+        }
+    }
+    .epr-emoji-category {
+        color: $white;
+        background-color: var(--body-color) !important;
+    }
+    .epr-main {
+        .epr-body {
+            .epr-emoji-list {
+                .epr-emoji-category {
+                    h2 {
+                        color: $white;
+                        background-color: var(--body-color) !important;
+                        border-color: var(--card-color) !important;
+                    }
+                }
+            }
+        }
+    }
+    .msger-inputarea {
+        .epr-search-container {
+            input {
+                background-color: var(--body-color) !important;
+                color: $white !important; 
+                border-color: var(--card-color) !important;
+
+            }
+        }
+    }
+    .ck{
+        .ck-editor__main{
+            >.ck-editor__editable{
+                background-color: transparent;
+                border-color: transparent;
+            }
+        }
+        &.ck-toolbar{
+            background-color: transparent;
+            border-color: transparent;
+            .ck-toolbar__separator{
+                background-color: var(--body-color) !important;
+            }
+        }
+        &.ck-icon{
+            &.ck-icon_inherit-color{
+                color: rgba($white , 0.8);
+            }
+        }
+        &.ck-button{
+            &.ck-button{
+                &:not(.ck-disabled){
+                    &:hover{
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        &.ck-button{
+            &.ck-on{
+                background-color: transparent;
+            }
+            &:focus{
+                border-color: rgba($white , 0.8);
+            }
+        }
+    }
+    .ck-heading-dropdown {
+        .ck-dropdown__panel {
+            .ck-list {
+                color: $white !important;
+                background-color: var(--body-color) !important;
+            }
+            .ck-heading_paragraph {
+                background-color: var(--body-color) !important;
+            }
+        }
+        .ck-dropdown__panel {
+            .ck {
+                .ck-insert-table-dropdown__grid {
+                    background-color: var(--body-color) !important;
+                    border-color: var(--border-color) !important;
+
+                }
+            }
+        }
+    }
+    .ck.ck-toolbar {
+        background-color: var(--body-color) !important;
+        color: $white !important; 
+    }
+    .rmdp-ep-arrow {
+        border-color: var(--card-color) !important;
+    }
+    .rmdp-header-values {
+        color: $white; 
+    } 
+    .rmdp-day {
+        span {
+            color: $white;
+        }
+    }
     .react-datepicker  {
         .react-datepicker__header{
             background-color: var(--body-color) !important;

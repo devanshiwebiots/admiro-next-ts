@@ -20,6 +20,70 @@
     display: block; 
   }
 }
+.swiper-button-prev {
+  width: calc(23px + (32 - 23) * ((100vw - 320px) / (1920 - 320)));
+  height: calc(23px + (32 - 23) * ((100vw - 320px) / (1920 - 320)));
+  &:after {
+        color: $white;
+        font-size: 12px !important;
+  }
+}
+.swiper-button-next {
+  width: calc(23px + (32 - 23) * ((100vw - 320px) / (1920 - 320)));
+  height: calc(23px + (32 - 23) * ((100vw - 320px) / (1920 - 320)));
+  &:after {
+        color: $white;
+        font-size: 12px !important;
+  }
+}
+.custom-container {
+	.horz-scroll-content {
+		width: 1600px;
+    &.scroll-content-width {
+  		width: 1600px;
+    }
+	}
+}
+.right-sidebar-chat {
+  .msger-inputarea {
+      position: relative;
+      .epr-header {
+          padding: 0px;
+          div {
+              padding: 0px;
+              .epr-search-container {
+                  padding: 0px;
+                  margin-bottom: 15px;
+              }
+          }
+      }
+      .epr-body {
+          .epr-emoji-category-content {
+              margin: 0px;
+          }
+      }
+      input {
+          width: 100%;
+          &:focus {
+              border: none !important;
+          }
+      }
+      .EmojiPickerReact{
+          right: 0;
+          bottom: 52px; 
+          position: absolute; 
+      }
+  }
+}
+
+
+.swiper-pagination {
+  .swiper-pagination-bullet {
+      &.swiper-pagination-bullet-active {
+          background-color: $primary-color !important; 
+      }
+  }
+}
 .invoice-2 {
   .table-borderless {
     .table-borderless {
@@ -1109,8 +1173,8 @@ table {
 .open-emoji {
   padding: 0;
   position: absolute;
-  right: 4%;
-  bottom: 7%;
+  right: 5%;
+  bottom: 25%;
   background-color: var(--body-color); 
 }
 .simplebar-placeholder {
