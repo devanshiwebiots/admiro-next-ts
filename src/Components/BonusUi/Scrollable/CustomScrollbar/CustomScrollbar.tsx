@@ -2,7 +2,7 @@ import CommonCardHeader from "@/CommonComponent/CommonCardHeader";
 import { CustomScrollbarTitle, ImagePath } from "@/Constant";
 import { CustomScrollbarSubTitle } from "@/Data/BonusUi/Scrollable";
 import Image from "next/image";
-import Scrollbars from "react-custom-scrollbars-2";
+import ScrollBar from "react-perfect-scrollbar";
 import { Card, CardBody, Col } from "reactstrap";
 
 export const CustomScrollbar = () => {
@@ -11,7 +11,7 @@ export const CustomScrollbar = () => {
       <Card>
         <CommonCardHeader headClass="pb-0" title={CustomScrollbarTitle} span={CustomScrollbarSubTitle} />
         <CardBody>
-          <Scrollbars style={{ width: "100%", height: "300px" }} className="vertical-scroll scroll-demo custom-container" autoHide>
+          <ScrollBar style={{ width: "100%", height: "300px" }} className="scroll-demo">
             <h5 className="pb-2">{CustomScrollbarTitle}</h5>
             <p>
               {"I'm quite interested in learning more about "}
@@ -27,7 +27,7 @@ export const CustomScrollbar = () => {
               {"One crucial point to remember is that, depending on the design, a scrollbar may operate either "}
               <em className="text-danger">{"horizontally or vertically"}</em> {". Additionally, it might alter when you work on a website that is global and operates in both left-to-right and right-to-left orientations."}
             </p>
-          </Scrollbars>
+          </ScrollBar>
         </CardBody>
       </Card>
     </Col>

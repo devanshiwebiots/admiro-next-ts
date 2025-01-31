@@ -1,7 +1,7 @@
 import CommonCardHeader from "@/CommonComponent/CommonCardHeader";
 import { BothSideScrollbarTitle } from "@/Constant";
 import { BothSideScroll, BothSideScrollSubTitle } from "@/Data/BonusUi/Scrollable";
-import Scrollbars from "react-custom-scrollbars-2";
+import ScrollBar from "react-perfect-scrollbar";
 import { Card, CardBody, Col, Row } from "reactstrap";
 
 export const BothSideScrollbar = () => {
@@ -11,7 +11,7 @@ export const BothSideScrollbar = () => {
         <CommonCardHeader headClass="pb-0" title={BothSideScrollbarTitle} span={BothSideScrollSubTitle} />
         <CardBody>
           <div className="scroll-bar-wrap">
-            <Scrollbars className="visible-scroll always-visible scroll-demo custom-container" style={{ width: "100%", height: "300px" }}>
+            <ScrollBar className="scroll-demo" style={{ width: "100%", height: "300px" }}>
               <div className="horz-scroll-content scroll-content-width">
                 <Row>
                   {BothSideScroll &&
@@ -22,7 +22,7 @@ export const BothSideScrollbar = () => {
                     ))}
                 </Row>
               </div>
-            </Scrollbars>
+            </ScrollBar>
           </div>
         </CardBody>
       </Card>

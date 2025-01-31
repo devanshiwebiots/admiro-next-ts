@@ -427,7 +427,6 @@ export const IncomeChart:ApexOptions = {
   series: [46],
   chart: {
     type: "radialBar",
-    // offsetY: -10,
     height: 420,
     sparkline: {
       enabled: false, 

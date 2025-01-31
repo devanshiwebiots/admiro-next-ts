@@ -6,8 +6,15 @@ import InvoiceSixTable from "./InvoiceSixTable";
 import { InvoiceButtons } from "../Common/InvoiceButtons";
 import { Ecommerce, Invoice } from "@/Constant";
 import Breadcrumbs from "@/CommonComponent/Breadcrumbs";
+import { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 
 const InvoiceSixContainer = () => {
+     const contentRef = useRef<HTMLDivElement | null>(null);
+  
+     const handlePrint = useReactToPrint({
+       contentRef,
+     });
   return (
     <>
       <Breadcrumbs mainTitle={`${Invoice}-6`} parent={Ecommerce} />
@@ -16,7 +23,7 @@ const InvoiceSixContainer = () => {
           <Col sm="12">
             <Card>
               <CardBody>
-                <div className="invoice">
+                <div className="invoice" ref={contentRef}>
                   <div>
                     <InvoiceSixHeader />
                     <hr />
@@ -29,7 +36,7 @@ const InvoiceSixContainer = () => {
           </Col>
         </Row>
       </Container>
-      <InvoiceButtons />
+      <InvoiceButtons handlePrint={handlePrint} />
     </>
   );
 };

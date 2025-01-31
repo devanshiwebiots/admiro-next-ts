@@ -5,8 +5,8 @@ import DatePicker from "react-datepicker";
 import { Col, FormGroup, Row } from "reactstrap";
 
 export const DateSection = () => {
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const [startDate, setStartDate] = useState<Date | null>(new Date());
+  const [endDate, setEndDate] = useState<Date | null>(new Date());
   return (
     <Row>
       <Col sm="4">
@@ -22,13 +22,13 @@ export const DateSection = () => {
       <Col sm="4">
         <FormGroup>
           <h5 className="f-w-600 mb-2">{StartingDate}</h5>
-          <DatePicker className="datepicker-here form-control" selected={startDate} onChange={(date: Date) => setStartDate(date)} />
+          <DatePicker className="datepicker-here form-control" selected={startDate} onChange={(date: Date | null) => setStartDate(date)} />
         </FormGroup>
       </Col>
       <Col sm="4">
         <FormGroup>
           <h5 className="f-w-600 mb-2">{EndingDate}</h5>
-          <DatePicker className="datepicker-here form-control" selected={endDate} onChange={(date: Date) => setEndDate(date)} />
+          <DatePicker className="datepicker-here form-control" selected={endDate} onChange={(date: Date | null) => setEndDate(date)} />
         </FormGroup>
       </Col>
     </Row>

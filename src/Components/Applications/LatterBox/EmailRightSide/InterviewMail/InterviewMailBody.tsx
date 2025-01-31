@@ -1,13 +1,13 @@
 import { ImagePath, Send } from "@/Constant";
 import { MailPropsType } from "@/Types/LatterBoxType";
-import React, { LegacyRef } from "react";
+import React, { Ref } from "react";
 import { ChevronDown } from "react-feather";
 import { Button } from "reactstrap";
 import InboxOption from "./InboxOption";
 import UserFooter from "./UserFooter";
 import UserMailBody from "./UserMailBody";
 
-const InterviewMailBody = React.forwardRef(({handlePrintData}:MailPropsType, ref:LegacyRef<HTMLDivElement> | undefined) => {
+const InterviewMailBody = React.forwardRef(({handlePrintData}:MailPropsType, ref:Ref<HTMLDivElement> | undefined) => {
   return (
     <div ref={ref} >
     <div className="mail-body-wrapper">

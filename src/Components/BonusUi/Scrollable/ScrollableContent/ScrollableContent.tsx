@@ -2,7 +2,7 @@ import CommonCardHeader from "@/CommonComponent/CommonCardHeader";
 import { ImagePath, ScrollableContentTitle } from "@/Constant";
 import { ScrollContentSubTitle, ScrollableContentData } from "@/Data/BonusUi/Scrollable";
 import Image from "next/image";
-import Scrollbars from "react-custom-scrollbars-2";
+import ScrollBar from "react-perfect-scrollbar";
 import { Card, CardBody, Col, ListGroup, ListGroupItem } from "reactstrap";
 
 export const ScrollableContent = () => {
@@ -11,7 +11,7 @@ export const ScrollableContent = () => {
       <Card>
         <CommonCardHeader headClass="pb-0" title={ScrollableContentTitle} span={ScrollContentSubTitle} />
         <CardBody>
-          <Scrollbars className="vertical-scroll scroll-demo scroll-b-none custom-container" autoHide style={{ width: "100%", height: "300px" }}>
+          <ScrollBar className="scroll-demo scroll-b-none" style={{ width: "100%", height: "300px" }}>
             <ListGroup className="main-lists-content">
               {ScrollableContentData &&
                 ScrollableContentData.map((item, index) => (
@@ -27,7 +27,7 @@ export const ScrollableContent = () => {
                   </ListGroupItem>
                 ))}
             </ListGroup>
-          </Scrollbars>
+          </ScrollBar>
         </CardBody>
       </Card>
     </Col>

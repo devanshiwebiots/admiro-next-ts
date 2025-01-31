@@ -1,13 +1,17 @@
 // @ts-nocheck
 import SVG from "@/CommonComponent/SVG";
 import { Class, CopyText, Markup } from "@/Constant";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "react-toastify";
 import { Button, Container, Input, Label, Row } from "reactstrap";
 
 const IconMarkUp = ({ icons, iTag, svg }) => {
   const featherIcons = require("feather-icons");
   const closeIcon = document.getElementsByClassName("icon-hover-bottom") as HTMLCollectionOf<HTMLElement>;
+
+   const handleCopy = async () => {
+     await navigator.clipboard.writeText(iTag.iTag);
+     toast.info("Code Copied to clipboard !", { position: "bottom-right", theme: "colored" });
+   };
 
   const closeIconContainer = () => (closeIcon[0].style.display = "none");
   if (iTag !== "" && icons !== "") closeIcon[0].style.display = "block";
@@ -32,11 +36,9 @@ const IconMarkUp = ({ icons, iTag, svg }) => {
               <div className="form-inline">
                 <div className="form-group">
                   <Input className="inp-val m-r-10" id="input_copy" type="text" defaultValue={iTag.iTag} />
-                  <CopyToClipboard text={iTag.iTag}>
-                    <Button color="primary" className="notification" onClick={() => toast.info("Code Copied to clipboard !", { position: "bottom-right", theme: "colored" })}>
-                      {CopyText}
-                    </Button>
-                  </CopyToClipboard>
+                  <Button color="primary" className="notification" onClick={handleCopy}>
+                    {CopyText}
+                  </Button>
                 </div>
               </div>
             </div>

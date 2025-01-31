@@ -1,7 +1,7 @@
 import CommonCardHeader from "@/CommonComponent/CommonCardHeader";
 import { BadgesScrollbarTitle } from "@/Constant";
 import { BadgeScrollData, BadgesScrollSubTitle } from "@/Data/BonusUi/Scrollable";
-import Scrollbars from "react-custom-scrollbars-2";
+import ScrollBar from "react-perfect-scrollbar";
 import { Badge, Card, CardBody, Col, ListGroup, ListGroupItem } from "reactstrap";
 
 export const BadgesScrollbar = () => {
@@ -10,7 +10,7 @@ export const BadgesScrollbar = () => {
       <Card>
         <CommonCardHeader headClass="pb-0" title={BadgesScrollbarTitle} span={BadgesScrollSubTitle} />
         <CardBody>
-          <Scrollbars className="vertical-scroll scroll-demo scroll-b-none" autoHide style={{ width: "100%", height: "300px" }}>
+          <ScrollBar className="scroll-demo" style={{ width: "100%", height: "300px" }}>
             <ListGroup numbered className="scroll-rtl">
               {BadgeScrollData &&
                 BadgeScrollData.map((item, index) => (
@@ -22,7 +22,7 @@ export const BadgesScrollbar = () => {
                   </ListGroupItem>
                 ))}
             </ListGroup>
-          </Scrollbars>
+          </ScrollBar>
         </CardBody>
       </Card>
     </Col>

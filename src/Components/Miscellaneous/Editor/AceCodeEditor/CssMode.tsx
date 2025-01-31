@@ -1,4 +1,4 @@
-import AceCodeEditor from "react-ace";
+import { Highlight, themes } from "prism-react-renderer";
 import { Card, CardBody, Col } from "reactstrap";
 import CommonCardHeader from "@/CommonComponent/CommonCardHeader";
 import { CssModeTitle } from "@/Constant";
@@ -10,7 +10,19 @@ export const CssMode = () => {
       <Card>
         <CommonCardHeader title={CssModeTitle} />
         <CardBody>
-          <AceCodeEditor className="aceEditor w-auto" mode="css" theme="monokai" value={CssData} name="blah2" setOptions={{ useWorker: false }} fontSize={14} showPrintMargin={true} showGutter={true} editorProps={{ $blockScrolling: true }} highlightActiveLine={true} />
+          <Highlight theme={themes.vsDark} code={CssData} language="css">
+            {({ style, tokens, getLineProps, getTokenProps }) => (
+              <pre style={style}>
+                {tokens.map((line, i) => (
+                  <div key={i} {...getLineProps({ line })}>
+                    {line.map((token, key) => (
+                      <span key={key} {...getTokenProps({ token })} />
+                    ))}
+                  </div>
+                ))}
+              </pre>
+            )}
+          </Highlight>
         </CardBody>
       </Card>
     </Col>

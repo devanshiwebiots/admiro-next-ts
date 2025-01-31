@@ -2,7 +2,7 @@ import CommonCardHeader from "@/CommonComponent/CommonCardHeader";
 import { ImagePath, SmallSizeScrollTitle } from "@/Constant";
 import { SmallSizeScrollSubTitle } from "@/Data/BonusUi/Scrollable";
 import Image from "next/image";
-import Scrollbars from "react-custom-scrollbars-2";
+import ScrollBar from "react-perfect-scrollbar";
 import { Card, CardBody, Col } from "reactstrap";
 
 export const SmallSizeScroll = () => {
@@ -12,7 +12,7 @@ export const SmallSizeScroll = () => {
         <CommonCardHeader headClass="pb-0" title={SmallSizeScrollTitle} span={SmallSizeScrollSubTitle} />
         <CardBody>
           <div className="scroll-bar-wrap">
-            <Scrollbars style={{ width: "100%", height: "300px" }} className="scrollbar-margins large-margin scroll-demo pe-0 custom-container" autoHide>
+            <ScrollBar className="scrollbar-margins large-margin scroll-demo pe-0" style={{ width: "100%", height: "300px" }}>
               <div className="margin-scrollbar">
                 <h5 className="pb-2">{"Solution for Business Transformation"}</h5>
               </div>
@@ -27,7 +27,7 @@ export const SmallSizeScroll = () => {
                 <em className="text-danger">{"Business Management model"}</em>
                 {', "Business Foundation & Management", which was tried and true for Indian business conditions while drawing inspiration from other successful global SME Business Management techniques.'}
               </p>
-            </Scrollbars>
+            </ScrollBar>
           </div>
         </CardBody>
       </Card>

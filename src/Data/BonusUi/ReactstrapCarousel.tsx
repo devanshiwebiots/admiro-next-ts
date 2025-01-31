@@ -239,9 +239,9 @@ export const ItemIntervalData = [
 ];
 
 export const ItemIntervalDataList = [
-  { id: 1, image: '5.jpg', interval: '10000' },
-  { id: 2, image: '2.jpg', interval: '2000' },
-  { id: 3, image: '10.jpg' },
+  { id: 1, image: 'slider/5.jpg', interval: '10000' },
+  { id: 2, image: 'slider/2.jpg', interval: '2000' },
+  { id: 3, image: 'slider/10.jpg' },
 ];
 
 export const DisableTouchData = [

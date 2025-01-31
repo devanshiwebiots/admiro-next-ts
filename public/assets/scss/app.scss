@@ -24,6 +24,7 @@
 @import "swiper/css/pagination";
 @import "swiper/css/navigation";
 @import "swiper/css/grid";
+@import "swiper/css/effect-fade";
 
 //react-bootstrap-typeahead
 @import 'react-bootstrap-typeahead/css/Typeahead.css';
@@ -38,9 +39,6 @@
 //react-calendar
 @import 'react-calendar/dist/Calendar.css';
 
-//react-vertical-timeline-component
-@import 'react-vertical-timeline-component/style.min.css';
-
 //react-image-crop
 @import 'react-image-crop/src/ReactCrop.scss';
 
@@ -51,9 +49,11 @@
 //photoswipe
 @import 'photoswipe/dist/photoswipe.css';
 
-//quill editor
-@import "react-quill/dist/quill.snow.css";
-@import "react-quill/dist/quill.bubble.css";
-
 //LeafLet
 @import "~leaflet/dist/leaflet.css";
+
+//tour
+@import "@sjmc11/tourguidejs/src/scss/tour.scss";
+
+//react-perfect-scrollbar
+@import "react-perfect-scrollbar/dist/css/styles.css";

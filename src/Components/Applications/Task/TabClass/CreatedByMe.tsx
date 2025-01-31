@@ -6,7 +6,7 @@ import { Link, MoreHorizontal, Trash2 } from "react-feather";
 import { CardBody, Table } from "reactstrap";
 import SweetAlert from "sweetalert2";
 
-const CreatedByMe = React.forwardRef((props, ref: LegacyRef<HTMLDivElement> | undefined) => {
+const CreatedByMe = () => {
   const { allTask } = useAppSelector((state) => state.task);
   const dispatch = useAppDispatch();
   const deleteTask = (userId: number) => {
@@ -30,7 +30,7 @@ const CreatedByMe = React.forwardRef((props, ref: LegacyRef<HTMLDivElement> | un
   };
 
   return (
-    <div ref={ref}>
+    <div>
       <CardBody className="p-0">
         <div className="taskadd">
           <div className="table-responsive custom-scrollbar table-borderless">
@@ -67,6 +67,6 @@ const CreatedByMe = React.forwardRef((props, ref: LegacyRef<HTMLDivElement> | un
       </CardBody>
     </div>
   );
-});
+};
 
 export default CreatedByMe;

@@ -1,10 +1,7 @@
 import CommonCardHeader from "@/CommonComponent/CommonCardHeader";
 import { HTMLModeTitle } from "@/Constant";
 import { HtmlData } from "@/Data/Miscellaneous/Editor/Editor";
-import "ace-builds/src-noconflict/ext-language_tools";
-import "ace-builds/src-noconflict/mode-html";
-import "ace-builds/src-noconflict/theme-monokai";
-import AceEditor from "react-ace";
+import { Highlight, themes } from "prism-react-renderer";
 import { Card, CardBody, Col } from "reactstrap";
 
 export const HtmlMode = () => {
@@ -13,7 +10,19 @@ export const HtmlMode = () => {
       <Card>
         <CommonCardHeader title={HTMLModeTitle} />
         <CardBody>
-          <AceEditor className="aceEditor w-auto" mode="html" theme="monokai" value={HtmlData} name="blah2" fontSize={14} setOptions={{ useWorker: false }} showPrintMargin={true} showGutter={true} editorProps={{ $blockScrolling: true }} highlightActiveLine={true} />
+          <Highlight theme={themes.vsDark} code={HtmlData} language="HTML">
+            {({ style, tokens, getLineProps, getTokenProps }) => (
+              <pre style={style}>
+                {tokens.map((line, i) => (
+                  <div key={i} {...getLineProps({ line })}>
+                    {line.map((token, key) => (
+                      <span key={key} {...getTokenProps({ token })} />
+                    ))}
+                  </div>
+                ))}
+              </pre>
+            )}
+          </Highlight>
         </CardBody>
       </Card>
     </Col>

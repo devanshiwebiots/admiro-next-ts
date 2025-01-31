@@ -12,16 +12,16 @@ import Breadcrumbs from "@/CommonComponent/Breadcrumbs";
 import { Ecommerce, Invoice } from "@/Constant";
 
 const Invoice1Container = () => {
-  const componentRef = useRef<HTMLDivElement | null>(null);
+   const contentRef = useRef<HTMLDivElement | null>(null);
 
-  const handlePrint = useReactToPrint({
-    content: () => componentRef.current,
-  });
+   const handlePrint = useReactToPrint({
+     contentRef,
+   });
 
   return (
     <>
       <Breadcrumbs mainTitle={`${Invoice}-1`} parent={Ecommerce} />
-      <div ref={componentRef}>
+      <div ref={contentRef}>
         <Container>
           <Row>
             <Col sm="12">

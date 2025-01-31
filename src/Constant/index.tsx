@@ -792,7 +792,7 @@ export const DarkColorCards: string = "Dark Color Card";
 export const FooterCard: string = "Card Footer";
 export const SmartHeadphones: string = "Smart headphones";
 //Bonus Ui - ReactstrapCarousel
-export const ReactstrapCarousel: string = "Reactstrap Carousel";
+export const ReactstrapCarousel: string = "Carousel";
 export const SlideOnly: string = "Slides Only";
 export const WithControl: string = "With Controls";
 export const AutoPlayVariants: string = "Auto Play Variant";
@@ -1250,15 +1250,19 @@ export const CommentTitleLearning: string = "Comments";
 
 //Editor
 export const EditorTitle: string = "Editor"
-export const QuillEditorTitle: string = "Quill Editor"
+export const CKEditorTitle: string = "CK Editor";
 export const AceCodeEditorTitle: string = "ACE Code Editor"
 export const JavascriptModeTitle: string = "Javascript Mode";
 export const HTMLModeTitle: string = "Html Mode";
 export const CssModeTitle: string = "Css Mode";
-export const PhpModeTitle: string = "Php Mode";
+export const JavaModeTitle: string = "Java Mode";
 export const StandardEditorTitle: string = "Standard Editor"
 export const SnowThemeTitle: string = "Snow Theme";
 export const BubbleThemeTitle: string = "Bubble Theme";
+export const CKEditorExample: string = "CK Editor";
+export const InlineEditors: string = "Inline Editor";
+export const EditorsText: string = "Your title";
+
 //Miscellaneous - Job Search
 export const JobSearch: string = "Job Search";
 export const CardsView: string = "Cards View";

@@ -3,7 +3,7 @@ import { Container, Row } from "reactstrap";
 import { CssMode } from "./CssMode";
 import { HtmlMode } from "./HtmlMode";
 import { JavascriptMode } from "./JavascriptMode";
-import { PhpMode } from "./PhpMode";
+import { JavaMode } from "./JavaMode";
 import Breadcrumbs from "@/CommonComponent/Breadcrumbs";
 import { AceCodeEditorTitle, EditorTitle } from "@/Constant";
 
@@ -16,7 +16,7 @@ const AceCodeEditorContainer = () => {
           <JavascriptMode />
           <HtmlMode />
           <CssMode />
-          <PhpMode />
+          <JavaMode />
         </Row>
       </Container>
     </>
