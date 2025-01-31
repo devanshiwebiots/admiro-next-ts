@@ -14,17 +14,19 @@ const Languages = () => {
   const [langDropdown, setLangDropdown] = useState(false);
   const languageSelection = () => setLangDropdown(!langDropdown);
   const dispatch = useAppDispatch();
+
   useEffect(() => {
-    setSelectedLang(LanguagesData.find((data) => data.icon == currentLanguage));
-    if (currentLanguage === "ae") dispatch(setLayoutType("rtl"));
-    else dispatch(setLayoutType("ltr"));
-  }, [currentLanguage]);
+    const foundLang = LanguagesData.find((data) => data.icon == currentLanguage);
+    setSelectedLang(foundLang || { logo: "", icon: "" });
+    dispatch(setLayoutType(currentLanguage === "ae" ? "rtl" : "ltr"));
+  }, [currentLanguage, dispatch]);
+
   return (
     <li className="custom-dropdown d-sm-block d-none">
       <div className={`translate_wrapper ${langDropdown ? "active" : ""}`}>
         <div className="current_lang" onClick={languageSelection}>
           <a className="lang" href={Href}>
-            <i className={selectedLang.logo} />
+            {selectedLang && <i className={selectedLang.logo} />}
             <h6 className="lang-txt f-w-700">{selectedLang.icon}</h6>
           </a>
         </div>
